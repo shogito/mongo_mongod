@@ -51,9 +51,6 @@
 - name: create data directory for mongodb
   file: path={{ mongod_datadir_prefix }}/mongo-{{ mongod_port }} state=directory owner={{ mongo_user }} group={{ mongo_group }}
 
-- name: create log directory for mongodb
-  file: path=/var/mongo state=directory owner={{ mongo_user }} group={{ mongo_group }}
-
 - name: Create the mongodb startup file for Rhel
   template: src=mongod.j2 dest=/etc/init.d/mongod-{{ mongod_port }} mode=0655
   when: ansible_os_family == "RedHat"

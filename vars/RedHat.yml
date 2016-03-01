@@ -1,7 +1,6 @@
 ---
 mongod_pkgs:
-   - mongo-10gen
-   - mongo-10gen-server
+   - mongodb-org
    - bc
    - python-pip
    - pymongo

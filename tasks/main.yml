@@ -21,8 +21,8 @@
   yum: name=libselinux-python state=installed
   when: ansible_os_family == "RedHat"
 
-- name: Create the repository for 10Gen
-  copy: src=10gen.repo dest=/etc/yum.repos.d/10gen.repo
+- name: Create the repository for mongo-org-3.2
+  copy: src=mongodb-org-3.2.repo dest=/etc/yum.repos.d/mongodb-org-3.2.repo
   when: ansible_os_family == "RedHat"
 
 - name: Create the EPEL Repository.
